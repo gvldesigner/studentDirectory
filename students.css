@@ -1,0 +1,47 @@
+.menu {
+  background-color: #f7f6ea;
+  width: 600px;
+  padding: 25px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+
+}
+img {
+  width: 45px;
+}
+
+div {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  line-height: 18px;
+  width: 250px;
+  margin-top: 3px;
+  padding: 10px;
+}
+
+input {
+  float: right;
+  border-radius: 3px;
+  line-height: 18px;
+}
+
+.grid-container {
+  width: 500px;
+  display: inline-block;
+
+}
+
+ul li {
+  list-style-type: none;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+.grid-container ul {
+  display: inline-block;
+}
+
+.grid-container li {
+  padding-right: 50px;
+}

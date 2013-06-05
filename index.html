@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Student Directory</title>
+  <link rel="stylesheet" type="text/css" href="students.css">
+</head>
+<body>
+  <div class="menu">
+    Please add your student profile below:<br>
+<!--     <button class="back">Back</button>
+ -->    
+  </div>
+
+  <div class="container"></div>
+
+  <ul class="grid-container"></ul>
+  
+  
+  <!-- templates -->
+  <script id="student-new-template" type='text/template'>
+    <div> 
+      <p>Name: <input class='name-input'/></p>
+      <p>Surname: <input class='surname-input'/></p>
+      <p>Age: <input class='age-input'/></p>
+      <p>Email: <input class='email-input'/></p>
+      <p>Course: <input class='course-input'/></p>
+      <button class='save'>Save</button>
+    </div>
+
+  </script>
+
+  <script id="student-list-edit-template" type='text/template'>
+    <div> 
+      <p>Name: <input class='name-input' value='<%= name %>'/></p>
+      <p>Surname: <input class='surname-input' value='<%= surname %>'/></p>
+      <p>Age: <input class='age-input' value='<%= age %>'/></p>
+      <p>Email: <input class='email-input'/ value='<%= email %>'></p>
+      <p>Course: <input class='course-input' value='<%= course %>'/></p>
+      <button class='save'>Save</button>
+      <button class='edit'>Cancel</button>
+    </div>
+
+  </script>
+
+  <script id="student-list-view-template" type='text/template'>
+    <div> 
+      <%= name %>
+      <%= surname %>,
+      <%= age %>
+      <%= email %><br>
+      <%= course %><br>
+      <button class='edit'>Edit</button>
+      <button class='delete'>Delete</button>
+      <hr>
+    </div>
+
+  </script>
+
+  <script id="student-grid-template" type='text/template'> 
+      
+      <img src="<%= image %>" /><br>
+      <%= name %>
+  </script>
+
+  <script id="student-final-template" type='text/template'>
+    <div> 
+      First Name: <%= name %>,
+      Surname: <%= surname %>,
+      Age: <%= age %>,
+      Email: <%= email %>,
+      Course: <% course %>
+      
+    </div>
+
+  </script>
+
+  <script id="app-view-template" type='text/template'>
+  <button class="add">Add</button>
+  <button class="view-table">View Table</button>
+  <button class="view-grid">View Grid</button>
+
+  </script>
+
+  
+
+
+  <script src="jquery-2.0.1.js"></script>
+  <script src="underscore-min.js"></script>
+  <script src="backbone-min.js"></script>
+  
+  <!-- models -->
+  <script src="models/student-model.js"></script>
+
+  <!-- collections -->
+  <script src="collections/student-collection.js"></script>
+
+  <!-- views -->
+
+  <script src="views/studentNew-view.js"></script>
+
+  <script src="views/studentList-view.js"></script>
+
+  <script src="views/studentGrid-view.js"></script>
+
+  <script src="views/studentEdit-view.js"></script>
+
+  <script src="views/app-view.js"></script>
+
+
+
+
+
+
+
+  
+
+</body>
+</html>
