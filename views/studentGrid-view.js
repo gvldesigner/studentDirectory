@@ -4,17 +4,12 @@ StudentGridView = Backbone.View.extend({
 
   initialize: function() {
 
-    /*Listen for new students in the collection,
-      and instantiate a view for each*/
-    this.listenTo(myStudents, 'add', function(newStudent){
-      this.render();
-    });
+    // rendering the .grid-container below
 
     this.render()
   },
 
   render: function () {
-    console.log('HEEEEEEEEEEEEEEYYYYYYYYYYYY')
     //Render the StudentView injecting empty div into the container = (this.el)
    // the view will always remember (this.el)
     $('.grid-container').append(this.el);

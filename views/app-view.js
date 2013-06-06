@@ -41,7 +41,7 @@ AppView = Backbone.View.extend({
 
  
   
-
+// Clearing page new student view
   add:function (){
     $('.grid-container').html('')
     new StudentNewView()

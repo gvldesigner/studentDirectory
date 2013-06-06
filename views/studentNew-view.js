@@ -5,13 +5,7 @@ StudentNewView = Backbone.View.extend({
   },
 
   initialize: function() {
-
-   /*Listen for new students in the collection,
-      and instantiate a view for each*/
-    this.listenTo(myStudents, 'add', function(newStudent){
-      this.render();
-    });
-
+    // rendering the .grid-container
     this.render()
   },
 
@@ -22,14 +16,6 @@ StudentNewView = Backbone.View.extend({
     // studentListTemplate is inserted into the empty div
     this.$el.html(studentNewTemplate() );
     
-  },
-
-  viewGrid: function () {
-    myStudents.each(function(student){
-      new StudentGridView({
-        model: student
-      });
-    })
   },
 
   save: function() {

@@ -1,3 +1,5 @@
+
+// this is the edit view, expects the Student model
 StudentEditView = Backbone.View.extend({
 
   events: {
@@ -6,12 +8,6 @@ StudentEditView = Backbone.View.extend({
   },
 
   initialize: function() {
-    
-    /*Listen for new students in the collection,
-      and instantiate a view for each*/
-    this.listenTo(myStudents, 'add', function(newStudent){
-      this.render();
-    });
 
     this.render()
   },
@@ -24,7 +20,7 @@ StudentEditView = Backbone.View.extend({
     this.$el.html(studentListEditTemplate(this.model.attributes) );
     
   },
-
+  // saving the attributes below
   save: function() {
     this.model.set({ 
       name: this.$el.find('.name-input').val(),
